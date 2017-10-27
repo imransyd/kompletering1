@@ -1,0 +1,15 @@
+extends layout
+
+
+block content
+  h1 #{title}
+  h2 ADMIN
+  if students
+  div(id='boxes')
+  each student in students
+    div Student name : #{student.name}
+    div Student class : #{student.class}
+    div Class proxy : #{student.pressence}
+    br
+    
+    

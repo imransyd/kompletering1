@@ -1,0 +1,16 @@
+extends layout
+
+
+block content
+  h1 #{title}
+  
+  
+  nav
+  ul
+    li
+      a(href="") Please select your name to give proxy
+      ul
+        li
+        each student, i in students
+          li
+            a(href="/students/"+student._id)= student.name

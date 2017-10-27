@@ -1,0 +1,9 @@
+extends layout
+
+
+block content
+  h1= student.name
+  h2= student.class
+  h2= student.pressence
+  hr
+  a.btn.btn-default(href='/students/edit/'+student._id) UPDATE PROXY 

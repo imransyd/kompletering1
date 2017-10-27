@@ -1,0 +1,25 @@
+extends layout
+
+
+block content
+  h1= student.name
+    
+  form(method='POST', action='/students/edit/'+student._id)
+
+    #form-group
+      label Name:
+      input.form-control(name='cname' type='text' value=student.name)
+    #form-group
+      label Class:
+      input.form-control(name='class' type='text' value=student.class)
+    #form-group
+      label Proxy
+      input(id=student.pressence type="radio" name="pressence" value='Pesent')
+      | Present
+      input(id=student.pressence type="radio" name="pressence" value='Absent')
+      | Absent
+        
+ 
+      
+    br
+    input.btn.btn-primary(type='submit',value='Submit')
